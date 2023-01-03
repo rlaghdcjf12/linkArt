@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import axios from 'axios';
-import Header from './components/header/Header';
+import { Header } from './components/header';
 
 function App() {
   const [list, setList] = useState([]);
