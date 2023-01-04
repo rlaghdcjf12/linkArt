@@ -1,11 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-// import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import { Box, AppBar, Avatar } from '@mui/material';
+import { Box, AppBar, Toolbar, Typography, Avatar, IconButton } from '@mui/material';
 
 function Header() {
   return (
