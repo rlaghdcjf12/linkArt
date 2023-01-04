@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton, Box } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import { Toolbar, Typography, Button, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 function Header() {
