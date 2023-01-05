@@ -1,14 +1,15 @@
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import { Box } from '@mui/material';
+import Spacer from './components/common/Spacer';
 import Header from './components/header/Header';
 import Main from './components/main/BucketList';
-import { Box } from '@mui/material';
 
 function App() {
   return (
     <div className='App'>
       <Header />
+      <Spacer axis='vertical' size={2} />
       <Body>
         <BrowserRouter>
           <Routes>
@@ -25,7 +26,7 @@ function App() {
 
 const Body = styled(Box)`
   width: 80vw;
-  margin: 10px auto;
+  margin: 0 auto;
 `;
 
 export default App;

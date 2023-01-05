@@ -21,9 +21,9 @@ const BorderHexagon = ({
 
 const Border = styled(Box)`
   clip-path: polygon(15% 0, 85% 0, 100% 50%, 85% 100%, 15% 100%, 0 50%);
-  width: calc(${(props) => props.width}${(props) => props.unit} + ${(props) => props.weight * 2}px);
-  height: calc(${(props) => props.height}${(props) => props.unit} + ${(props) => props.weight * 2}px);
-  padding: ${(props) => props.weight}px;
+  width: calc(${(props) => props.width}${(props) => props.unit} + ${(props) => props.weight}px);
+  height: calc(${(props) => props.height}${(props) => props.unit} + ${(props) => props.weight}px);
+  padding: ${(props) => props.weight}px 0 0 ${(props) => props.weight}px;
   background-color: ${(props) => props.color};
   margin: auto;
 `;
