@@ -1,28 +1,31 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import styled from 'styled-components';
 import Header from './components/header/Header';
 import Main from './components/main/BucketList';
+import { Box } from '@mui/material';
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      <BrowserRouter>
-        <Routes>
-          {/* <Route path='/' element={<Main />}></Route> */}
-          <Route path='*' element={<Main />}></Route>
-          {/* <Route path='/product/*' element={<Product />}></Route> */}
-          {/* 상단에 위치하는 라우트들의 규칙을 모두 확인, 일치하는 라우트가 없는경우 처리 */}
-          {/* <Route path='*' element={<NotFound />}></Route> */}
-        </Routes>
-      </BrowserRouter>
-      <header>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
+      <Body>
+        <BrowserRouter>
+          <Routes>
+            <Route path='*' element={<Main />}></Route>
+            {/* <Route path='/' element={<Main />}></Route> */}
+            {/* <Route path='/product/*' element={<Product />}></Route> */}
+            {/* <Route path='*' element={<NotFound />}></Route> */}
+          </Routes>
+        </BrowserRouter>
+      </Body>
     </div>
   );
 }
+
+const Body = styled(Box)`
+  width: 80vw;
+  margin: 10px auto;
+`;
 
 export default App;

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import axios from 'axios';
-import { Card, Grid } from '@mui/material';
+import { Grid, Tooltip, Zoom } from '@mui/material';
+import BorderHexagon from '../common/BorderHexagon';
 
 function BucketList() {
   const [bucketList, setBucketList] = useState([]);
@@ -21,12 +21,22 @@ function BucketList() {
   }, []);
 
   return (
-    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+    <Grid container spacing={{ xs: 2 }} columns={{ xs: 4 }}>
       {bucketList?.map((element, index) => (
-        <Grid item xs={2} sm={4} md={4} key={index}>
-          <Card></Card>
-          {element.properties.bucket.rich_text[0].plain_text}
-        </Grid>
+        <Tooltip
+          TransitionComponent={Zoom}
+          title={element.properties.bucket.rich_text[0].plain_text}
+          placement='bottom'
+        >
+          <Grid item xs={2} key={index}>
+            <BorderHexagon
+              width='100'
+              height='100'
+              border='2px solid gold'
+              image={element.properties.image.rich_text[0].plain_text}
+            ></BorderHexagon>
+          </Grid>
+        </Tooltip>
       ))}
     </Grid>
   );
